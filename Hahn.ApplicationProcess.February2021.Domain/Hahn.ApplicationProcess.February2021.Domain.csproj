@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hahn.ApplicationProcess.February2021.Data\Hahn.ApplicationProcess.February2021.Data.csproj" />
+  </ItemGroup>
+
+</Project>

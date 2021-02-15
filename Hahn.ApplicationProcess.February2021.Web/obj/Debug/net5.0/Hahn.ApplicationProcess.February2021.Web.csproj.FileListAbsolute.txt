@@ -1,0 +1,25 @@
+C:\Users\andrc\Documents\Development\Training Projects\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.csprojAssemblyReference.cache
+C:\Users\andrc\Documents\Development\Training Projects\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\bin\Debug\net5.0\appsettings.Development.json
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\bin\Debug\net5.0\appsettings.json
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\bin\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.exe
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\bin\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.deps.json
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\bin\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.runtimeconfig.json
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\bin\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.runtimeconfig.dev.json
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\bin\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.dll
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\bin\Debug\net5.0\ref\Hahn.ApplicationProcess.February2021.Web.dll
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\bin\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.pdb
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.csprojAssemblyReference.cache
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.AssemblyInfoInputs.cache
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.AssemblyInfo.cs
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.csproj.CoreCompileInputs.cache
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\obj\Debug\net5.0\staticwebassets\Hahn.ApplicationProcess.February2021.Web.StaticWebAssets.Manifest.cache
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\obj\Debug\net5.0\staticwebassets\Hahn.ApplicationProcess.February2021.Web.StaticWebAssets.xml
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\obj\Debug\net5.0\scopedcss\bundle\Hahn.ApplicationProcess.February2021.Web.styles.css
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.RazorTargetAssemblyInfo.cache
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.dll
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\obj\Debug\net5.0\ref\Hahn.ApplicationProcess.February2021.Web.dll
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.pdb
+C:\Project\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.Application\Hahn.ApplicationProcess.February2021.Web\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Web.genruntimeconfig.cache
