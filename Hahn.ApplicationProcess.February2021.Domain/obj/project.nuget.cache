@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "q5kdAK6AsZ4dbJ0oMWrLvrX1tE0F1BXWCuBTu4KCSqGCg0vf2FGqHwtVj3kpTsepbbgiULaZmURSDANrjUjXmA==",
+  "dgSpecHash": "no09XOubOlVMrppcWOOxLAu5B4PRcm75QYIluakFLLD93Srgvk9EEWTeVoHxakPtwR4MP6lnmvn5R+LJfD5C6g==",
   "success": true,
-  "projectFilePath": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aclavijo\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\aclavijo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "C:\\Users\\aclavijo\\.nuget\\packages\\fluentvalidation\\9.5.1\\fluentvalidation.9.5.1.nupkg.sha512",
+    "C:\\Users\\aclavijo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\aclavijo\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0-preview.1.21102.12\\microsoft.extensions.dependencyinjection.6.0.0-preview.1.21102.12.nupkg.sha512",
+    "C:\\Users\\aclavijo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0-preview.1.21102.12\\microsoft.extensions.dependencyinjection.abstractions.6.0.0-preview.1.21102.12.nupkg.sha512",
+    "C:\\Users\\aclavijo\\.nuget\\packages\\microsoft.extensions.options\\3.0.0\\microsoft.extensions.options.3.0.0.nupkg.sha512",
+    "C:\\Users\\aclavijo\\.nuget\\packages\\microsoft.extensions.primitives\\3.0.0\\microsoft.extensions.primitives.3.0.0.nupkg.sha512",
+    "C:\\Users\\aclavijo\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

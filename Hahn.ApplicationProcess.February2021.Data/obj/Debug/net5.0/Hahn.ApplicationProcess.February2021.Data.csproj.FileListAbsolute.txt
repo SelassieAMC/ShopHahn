@@ -1,0 +1,15 @@
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Data\bin\Debug\net5.0\Hahn.ApplicationProcess.February2021.Data.deps.json
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Data\bin\Debug\net5.0\Hahn.ApplicationProcess.February2021.Data.dll
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Data\bin\Debug\net5.0\ref\Hahn.ApplicationProcess.February2021.Data.dll
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Data\bin\Debug\net5.0\Hahn.ApplicationProcess.February2021.Data.pdb
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Data\bin\Debug\net5.0\Hahn.ApplicationProcess.February2021.Domain.dll
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Data\bin\Debug\net5.0\Hahn.ApplicationProcess.February2021.Domain.pdb
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Data\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Data.csprojAssemblyReference.cache
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Data\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Data\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Data.AssemblyInfoInputs.cache
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Data\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Data.AssemblyInfo.cs
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Data\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Data.csproj.CoreCompileInputs.cache
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Data\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Data.csproj.CopyComplete
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Data\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Data.dll
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Data\obj\Debug\net5.0\ref\Hahn.ApplicationProcess.February2021.Data.dll
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Data\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Data.pdb
