@@ -1,10 +1,10 @@
-﻿using FluentValidation;
+﻿using AutoMapper;
+using FluentValidation;
 using Hahn.ApplicationProcess.February2021.Domain.DTO;
 using Hahn.ApplicationProcess.February2021.Domain.Interfaces;
+using Hahn.ApplicationProcess.February2021.Domain.Models;
 using Hahn.ApplicationProcess.February2021.Domain.ResponseObjects;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,31 +13,124 @@ namespace Hahn.ApplicationProcess.February2021.Domain.BL
     public class AssetService : IAssetService
     {
         private readonly IValidator<AssetDto> _assetValidator;
+        private readonly IMapper _mapper;
+        private readonly IUnitOfWork _uOw;
 
-        public AssetService(IValidator<AssetDto> assetValidator)
+        public AssetService(IValidator<AssetDto> assetValidator, IMapper mapper, IUnitOfWork uOw)
         {
             _assetValidator = assetValidator;
+            _mapper = mapper;
+            _uOw = uOw;
         }
 
-        public Task<UnitResult<AssetDto>> CreateAsset(AssetDto assetDto)
+        public async Task<UnitResult<AssetDto>> CreateAsset(AssetDto assetDto)
         {
-            throw new NotImplementedException();
+            var result = new UnitResult<AssetDto>();
+            try
+            {
+                var eval = await IsValidAsset(assetDto);
+                if (!eval.Item1)
+                {
+                    result.ValidationFailure(eval.Item2);
+                    return result;
+                }
+                var asset = _mapper.Map<Asset>(assetDto);
+                await _uOw.AssetRepository.CreateAsync(asset);
+                _uOw.Commit();
+
+                var data = _mapper.Map<AssetDto>(await _uOw.AssetRepository.GetByIdAsync(asset.ID));
+                result.Success(data);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                result.Failure(ex.Message);
+                return result;
+            }
         }
 
-        public UnitResult<AssetDto> DeleteAsset(int id)
+        public UnitResult<AssetDto> DeleteAsset(int Id)
         {
-            throw new NotImplementedException();
+            var result = new UnitResult<AssetDto>();
+            try
+            {
+                _uOw.AssetRepository.Delete(Id);
+                _uOw.Commit();
+
+                result.Success();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                result.Failure(ex.Message);
+                return result;
+            }
         }
 
         public async Task<UnitResult<AssetDto>> GetAssetById(int Id)
         {
-            await _assetValidator.ValidateAsync(new AssetDto());
-            throw new NotImplementedException();
+            var result = new UnitResult<AssetDto>();
+            try
+            {
+                var data = await _uOw.AssetRepository.GetByIdAsync(Id);
+                if(data is null)
+                {
+                    result.Failure("Asset not found!");
+                }
+                result.Success(_mapper.Map<AssetDto>(data));
+                return result;
+            }
+            catch (Exception ex)
+            {
+                result.Failure(ex.Message,new AssetDto());
+                return result;
+            }
         }
 
-        public Task<UnitResult<AssetDto>> UpdateAsset(int id, AssetDto assetDto)
+        public async Task<UnitResult<AssetDto>> UpdateAsset(AssetDto assetDto)
         {
-            throw new NotImplementedException();
+            var result = new UnitResult<AssetDto>();
+            try
+            {
+                var eval = await IsValidAsset(assetDto);
+                if (!eval.Item1)
+                {
+                    result.Failure(eval.Item2);
+                    return result;
+                }
+                var asset = _mapper.Map<Asset>(assetDto);
+                if (await _uOw.AssetRepository.GetByIdAsync(asset.ID) is null)
+                {
+                    result.Failure("Asset not found!");
+                    return result;
+                }
+                _uOw.AssetRepository.UpdateAsync(asset);
+                _uOw.Commit();
+                var data = _uOw.AssetRepository.GetByIdAsync(asset.ID);
+
+                result.Success(_mapper.Map<AssetDto>(data));
+                return result;
+            }
+            catch (Exception ex)
+            {
+                result.Failure(ex.Message, new AssetDto());
+                return result;
+            }
+        }
+
+        private async Task<(bool, string)> IsValidAsset(AssetDto assetDto)
+        {
+            var result = await _assetValidator.ValidateAsync(assetDto);
+            var sb = new StringBuilder();
+            //return properties and errors violated
+            if (!result.IsValid)
+            {
+                foreach(var error in result.Errors)
+                {
+                    sb.Append($"| Invalid value at property {error.PropertyName}, {error.ErrorMessage} |");
+                }
+            }
+            return (result.IsValid, sb.ToString());
         }
     }
 }

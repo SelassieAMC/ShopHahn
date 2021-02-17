@@ -8,6 +8,6 @@ namespace Hahn.ApplicationProcess.February2021.Domain.Interfaces
 {
     public interface ISearchCountry
     {
-        public Task<(string,bool)> SearchAsync(string countryName);
+        public Task<bool> SearchAsync(string countryName);
     }
 }

@@ -10,28 +10,19 @@ namespace Hahn.ApplicationProcess.February2021.Data.WebApi
 {
     public class SearchCountry : ISearchCountry
     {
-        private readonly IHttpClient _httpClient;
-        private readonly string _baseUri;
+        private readonly HttpClient _httpClient;
 
-        public SearchCountry(IHttpClient httpClient)
+        public SearchCountry(IHttpClientFactory clientFactory)
         {
-            _httpClient = httpClient;
-            _baseUri = "https://restcountries.eu/rest/v2/name/";
+            _httpClient = clientFactory.CreateClient("country");
         }
-        public async Task<(string, bool)> SearchAsync(string countryName)
+        public async Task<bool> SearchAsync(string countryName)
         {
             using (HttpRequestMessage request =
-                new HttpRequestMessage(HttpMethod.Get, _baseUri + countryName + "?fullText=true"))
+                new HttpRequestMessage(HttpMethod.Get, countryName + "?fullText=true"))
             {
                 var response = await _httpClient.SendAsync(request);
-                if (response.IsSuccessStatusCode)
-                {
-                    return (string.Empty, true);
-                }
-                else
-                {
-                    return (response.ReasonPhrase,false);
-                }
+                return response.IsSuccessStatusCode;
             }
         }
     }

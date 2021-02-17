@@ -1,8 +1,11 @@
 ﻿using Hahn.ApplicationProcess.February2021.Domain.DTO;
 using Hahn.ApplicationProcess.February2021.Domain.Interfaces;
+using Hahn.ApplicationProcess.February2021.Domain.Models.Examples;
 using Hahn.ApplicationProcess.February2021.Domain.ResponseObjects;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
+using Swashbuckle.AspNetCore.Filters;
 using System.Threading.Tasks;
 
 namespace Hahn.ApplicationProcess.February2021.Web.Controllers
@@ -30,17 +33,29 @@ namespace Hahn.ApplicationProcess.February2021.Web.Controllers
         /// </summary>
         /// <param name="asset">Asset object to create</param>
         /// <returns>Asset object created</returns>
+        /// <response code="201">Returns the newly created assset</response>
+        /// <response code="400">Validation error in the given Asset</response> 
+        /// <response code="500">Any server side error</response>  
         [HttpPost]
-        [ProducesResponseType(typeof(UnitResult<AssetDto>), StatusCodes.Status201Created)]
-        [ProducesResponseType(typeof(UnitResult<AssetDto>), StatusCodes.Status500InternalServerError)]
+        [SwaggerResponse(StatusCodes.Status201Created, type: typeof(AssetCreationResponseExample), description: "Successfully added the Asset")]
+        [SwaggerResponse(StatusCodes.Status400BadRequest, type: typeof(BadRequestResponseExample), description: "Validation errors")]
+        [SwaggerResponse(StatusCodes.Status500InternalServerError, type: typeof(InternalServerErrorResponseExample), description: "Server errors")]
+        [SwaggerResponseExample(StatusCodes.Status201Created, typeof(AssetCreationResponseExample))]
+        [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(BadRequestResponseExample))]
+        [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(InternalServerErrorResponseExample))]
+        [SwaggerRequestExample(typeof(AssetDto), typeof(AssetCreationRequestExample))]
         public async Task<IActionResult> CreateAssetAsync(AssetDto asset)
         {
             var result = await _assetService.CreateAsset(asset);
             if (result.EndOnSuccess)
             {
-                return StatusCode(StatusCodes.Status201Created, result.Result);
+                return StatusCode(StatusCodes.Status201Created, result);
             }
-            return StatusCode(StatusCodes.Status500InternalServerError, result.ErrorMessage);
+            if (result.EndOnValidationError)
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, result);
+            }
+            return StatusCode(StatusCodes.Status500InternalServerError, result);
         }
 
         /// <summary>
@@ -48,7 +63,7 @@ namespace Hahn.ApplicationProcess.February2021.Web.Controllers
         /// </summary>
         /// <param name="id">Asset Id</param>
         /// <returns>Asset object with the Id specified</returns>
-        [HttpGet]
+        [HttpGet()]
         [ProducesResponseType(typeof(UnitResult<AssetDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(UnitResult<AssetDto>), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(UnitResult<AssetDto>), StatusCodes.Status500InternalServerError)]
@@ -69,23 +84,36 @@ namespace Hahn.ApplicationProcess.February2021.Web.Controllers
         /// <summary>
         /// Update an Asset with the given Id and new data
         /// </summary>
-        /// <param name="id">Asset Id</param>
         /// <param name="asset">Asset object with the new data</param>
         /// <returns>Asset object with the new data</returns>
+        /// <response code="200">Successfully updated the Asset</response>
+        /// <response code="400">Validation error in the given Asset</response> 
+        /// <response code="404">Asset not found for update</response> 
+        /// <response code="500">Any server side error</response>  
         [HttpPut]
-        [ProducesResponseType(typeof(UnitResult<AssetDto>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(UnitResult<AssetDto>), StatusCodes.Status404NotFound)]
-        [ProducesResponseType(typeof(UnitResult<AssetDto>), StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> UpdateAssetAsync([FromQuery] int id, AssetDto asset)
+        [SwaggerResponse(StatusCodes.Status200OK, type: typeof(AssetUpdateResponseExample), description: "Successfully updated the Asset")]
+        [SwaggerResponse(StatusCodes.Status400BadRequest, type: typeof(BadRequestResponseExample), description: "Validation errors")]
+        [SwaggerResponse(StatusCodes.Status404NotFound, type: typeof(NotFoundResponseExample), description: "Asset not found!")]
+        [SwaggerResponse(StatusCodes.Status500InternalServerError, type: typeof(InternalServerErrorResponseExample), description: "Server errors")]
+        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(AssetUpdateResponseExample))]
+        [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(BadRequestResponseExample))]
+        [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(NotFoundResponseExample))]
+        [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(InternalServerErrorResponseExample))]
+        [SwaggerRequestExample(typeof(AssetDto), typeof(AssetUpdateRequestExample))]
+        public async Task<IActionResult> UpdateAssetAsync(AssetDto asset)
         {
-            var result = await _assetService.UpdateAsset(id, asset);
+            var result = await _assetService.UpdateAsset(asset);
             if (result.Result is null)
             {
-                return NotFound();
+                return NotFound(result);
             }
             if (result.EndOnSuccess)
             {
                 return Ok(result.Result);
+            }
+            if (result.EndOnValidationError)
+            {
+                return BadRequest(result.Result);
             }
             return StatusCode(StatusCodes.Status500InternalServerError, result.ErrorMessage);
         }
@@ -99,7 +127,7 @@ namespace Hahn.ApplicationProcess.February2021.Web.Controllers
         [ProducesResponseType(typeof(UnitResult<AssetDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(UnitResult<AssetDto>), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(UnitResult<AssetDto>), StatusCodes.Status500InternalServerError)]
-        public IActionResult DeleteAssetAsync([FromQuery] int id)
+        public IActionResult DeleteAsset([FromQuery] int id)
         {
             var result = _assetService.DeleteAsset(id);
             if (result.EndOnSuccess)
@@ -108,7 +136,7 @@ namespace Hahn.ApplicationProcess.February2021.Web.Controllers
             }
             if (result.EndOnError)
             {
-                return NotFound(result.ErrorMessage);
+                return NotFound();
             }
             return StatusCode(StatusCodes.Status500InternalServerError, result.ErrorMessage);
         }

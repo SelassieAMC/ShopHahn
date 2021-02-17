@@ -117,3 +117,14 @@ C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.Fe
 C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Test\obj\Debug\net5.0\ref\Hahn.ApplicationProcess.February2021.Test.dll
 C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Test\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Test.pdb
 C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Test\obj\Debug\net5.0\Hahn.ApplicationProcess.February2021.Test.genruntimeconfig.cache
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Test\bin\Debug\net5.0\System.Net.Http.Formatting.dll
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Test\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Test\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Test\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Test\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Test\bin\Debug\net5.0\Scrutor.dll
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Test\bin\Debug\net5.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Test\bin\Debug\net5.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Test\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Test\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\aclavijo\Documents\Privado\Projects\ShopHahn\Hahn.ApplicationProcess.February2021.Test\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
