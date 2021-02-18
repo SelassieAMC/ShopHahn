@@ -13,6 +13,7 @@ namespace Hahn.ApplicationProcess.February2021.Data
         {
             modelBuilder.Entity<Asset>(entity =>
             {
+                entity.HasKey(a => a.ID);
                 entity.HasOne(a => a.Deparment)
                 .WithMany(s => s.Assets);
             });

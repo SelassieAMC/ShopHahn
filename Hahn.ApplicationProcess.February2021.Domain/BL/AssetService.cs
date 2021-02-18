@@ -106,14 +106,14 @@ namespace Hahn.ApplicationProcess.February2021.Domain.BL
                 }
                 _uOw.AssetRepository.UpdateAsync(asset);
                 _uOw.Commit();
-                var data = _uOw.AssetRepository.GetByIdAsync(asset.ID);
+                var data = await _uOw.AssetRepository.GetByIdAsync(asset.ID);
 
                 result.Success(_mapper.Map<AssetDto>(data));
                 return result;
             }
             catch (Exception ex)
             {
-                result.Failure(ex.Message, new AssetDto());
+                result.Failure(ex.Message, null);
                 return result;
             }
         }

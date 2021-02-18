@@ -31,7 +31,9 @@ namespace Hahn.ApplicationProcess.February2021.Data.Persistence.Repositories
 
         public async Task<T> GetByIdAsync(int id)
         {
-            return await _dbSet.FindAsync(id);
+            var entity = await _dbSet.FindAsync(id);
+            _context.Entry(entity).State = EntityState.Detached;
+            return entity;
         }
 
         public virtual void UpdateAsync(T entity)

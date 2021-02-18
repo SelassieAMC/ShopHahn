@@ -134,6 +134,8 @@ namespace Hahn.ApplicationProcess.February2021.Web.Controllers
         [SwaggerResponse(StatusCodes.Status200OK, type: typeof(UnitResult<AssetDto>))]
         [SwaggerResponse(StatusCodes.Status404NotFound, type: typeof(BadRequestResponseExample))]
         [SwaggerResponse(StatusCodes.Status500InternalServerError, type:typeof(InternalServerErrorResponseExample))]
+        [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(NotFoundResponseExample))]
+        [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(InternalServerErrorResponseExample))]
         public IActionResult DeleteAsset([FromQuery] int id)
         {
             var result = _assetService.DeleteAsset(id);

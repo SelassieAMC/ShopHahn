@@ -19,7 +19,8 @@ namespace Hahn.ApplicationProcess.February2021.Domain.Validators
                 .GreaterThanOrEqualTo(DateTimeOffset.UtcNow.AddYears(-1))
                 .WithMessage("date must not be older than one year");
             RuleFor(asset => asset.EMailAdressOfDepartment)
-                .EmailAddress();
+                .EmailAddress()
+                .WithMessage("is not a valid email address.");
             RuleFor(asset => asset.CountryOfDepartment)
                 .MustAsync(async (country, cancellationToken) =>
                {
