@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Serilog;
 using Swashbuckle.AspNetCore.Filters;
 using System;
 using System.IO;
@@ -34,7 +35,6 @@ namespace Hahn.ApplicationProcess.February2021.Web
                 c.ExampleFilters();
                 c.OperationFilter<AddResponseHeadersFilter>();
                 c.IncludeXmlComments(filePath);
-
             });
             services.AddSwaggerExamplesFromAssemblyOf<AssetCreationRequestExample>();
         }
@@ -48,6 +48,8 @@ namespace Hahn.ApplicationProcess.February2021.Web
             }
 
             app.UseHttpsRedirection();
+
+            app.UseSerilogRequestLogging();
 
             app.UseRouting();
 
