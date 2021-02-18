@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Web\\Hahn.ApplicationProcess.February2021.Web.csproj": {}
+    "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Web\\Hahn.ApplicationProcess.February2021.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj": {
+    "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj",
+        "projectUniqueName": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj",
         "projectName": "Hahn.ApplicationProcess.February2021.Data",
-        "projectPath": "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj",
-        "packagesPath": "C:\\Users\\aclavijo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Data\\obj\\",
+        "projectPath": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj",
+        "packagesPath": "C:\\Users\\andrc\\.nuget\\packages\\",
+        "outputPath": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\aclavijo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andrc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj": {
-                "projectPath": "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj"
+              "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj": {
+                "projectPath": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj"
               }
             }
           }
@@ -75,31 +72,25 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj": {
+    "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj",
+        "projectUniqueName": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj",
         "projectName": "Hahn.ApplicationProcess.February2021.Domain",
-        "projectPath": "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj",
-        "packagesPath": "C:\\Users\\aclavijo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Domain\\obj\\",
+        "projectPath": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj",
+        "packagesPath": "C:\\Users\\andrc\\.nuget\\packages\\",
+        "outputPath": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\aclavijo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andrc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -153,31 +144,25 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Web\\Hahn.ApplicationProcess.February2021.Web.csproj": {
+    "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Web\\Hahn.ApplicationProcess.February2021.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Web\\Hahn.ApplicationProcess.February2021.Web.csproj",
+        "projectUniqueName": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Web\\Hahn.ApplicationProcess.February2021.Web.csproj",
         "projectName": "Hahn.ApplicationProcess.February2021.Web",
-        "projectPath": "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Web\\Hahn.ApplicationProcess.February2021.Web.csproj",
-        "packagesPath": "C:\\Users\\aclavijo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Web\\obj\\",
+        "projectPath": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Web\\Hahn.ApplicationProcess.February2021.Web.csproj",
+        "packagesPath": "C:\\Users\\andrc\\.nuget\\packages\\",
+        "outputPath": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Web\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\aclavijo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andrc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -191,8 +176,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj": {
-                "projectPath": "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj"
+              "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj": {
+                "projectPath": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj"
               }
             }
           }
@@ -238,7 +223,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -62,23 +62,28 @@ namespace Hahn.ApplicationProcess.February2021.Web.Controllers
         /// Fetched an Asset by the given Id
         /// </summary>
         /// <param name="id">Asset Id</param>
-        /// <returns>Asset object with the Id specified</returns>
+        /// <response code="200">Found the asset by the given id</response> 
+        /// <response code="404">Asset not found for update</response> 
+        /// <response code="500">Any server side error</response>  
         [HttpGet()]
-        [ProducesResponseType(typeof(UnitResult<AssetDto>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(UnitResult<AssetDto>), StatusCodes.Status404NotFound)]
-        [ProducesResponseType(typeof(UnitResult<AssetDto>), StatusCodes.Status500InternalServerError)]
+        [SwaggerResponse(StatusCodes.Status200OK, type: typeof(AssetGetResponseExample), description: "Found the Asset by the given Id")]
+        [SwaggerResponse(StatusCodes.Status404NotFound, type: typeof(NotFoundResponseExample), description: "Asset not found!")]
+        [SwaggerResponse(StatusCodes.Status500InternalServerError, type: typeof(InternalServerErrorResponseExample), description: "Server errors")]
+        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(AssetGetResponseExample))]
+        [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(NotFoundResponseExample))]
+        [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(InternalServerErrorResponseExample))]
         public async Task<IActionResult> GetAssetByIdAsync([FromQuery] int id)
         {
             var result = await _assetService.GetAssetById(id);
             if (result.Result is null)
             {
-                return NotFound();
+                return NotFound(result);
             }
             if (result.EndOnSuccess)
             {
-                return Ok(result.Result);
+                return Ok(result);
             }
-            return StatusCode(StatusCodes.Status500InternalServerError, result.ErrorMessage);
+            return StatusCode(StatusCodes.Status500InternalServerError, result);
         }
 
         /// <summary>
@@ -109,36 +114,38 @@ namespace Hahn.ApplicationProcess.February2021.Web.Controllers
             }
             if (result.EndOnSuccess)
             {
-                return Ok(result.Result);
+                return Ok(result);
             }
             if (result.EndOnValidationError)
             {
-                return BadRequest(result.Result);
+                return BadRequest(result);
             }
-            return StatusCode(StatusCodes.Status500InternalServerError, result.ErrorMessage);
+            return StatusCode(StatusCodes.Status500InternalServerError, result);
         }
 
         /// <summary>
         /// Delete an Asset by the given Id 
         /// </summary>
         /// <param name="id">Asset Id</param>
-        /// <returns>StatusResult</returns>
+        /// <response code="200">Successfully deleted the Asset</response>
+        /// <response code="404">Asset not found for update</response> 
+        /// <response code="500">Any server side error</response> 
         [HttpDelete]
-        [ProducesResponseType(typeof(UnitResult<AssetDto>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(UnitResult<AssetDto>), StatusCodes.Status404NotFound)]
-        [ProducesResponseType(typeof(UnitResult<AssetDto>), StatusCodes.Status500InternalServerError)]
+        [SwaggerResponse(StatusCodes.Status200OK, type: typeof(UnitResult<AssetDto>))]
+        [SwaggerResponse(StatusCodes.Status404NotFound, type: typeof(BadRequestResponseExample))]
+        [SwaggerResponse(StatusCodes.Status500InternalServerError, type:typeof(InternalServerErrorResponseExample))]
         public IActionResult DeleteAsset([FromQuery] int id)
         {
             var result = _assetService.DeleteAsset(id);
             if (result.EndOnSuccess)
             {
-                return Ok();
+                return Ok(result);
             }
             if (result.EndOnError)
             {
-                return NotFound();
+                return NotFound(result);
             }
-            return StatusCode(StatusCodes.Status500InternalServerError, result.ErrorMessage);
+            return StatusCode(StatusCodes.Status500InternalServerError, result);
         }
     }
 }

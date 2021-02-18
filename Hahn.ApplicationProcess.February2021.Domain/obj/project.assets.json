@@ -2683,23 +2683,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aclavijo\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\andrc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj",
+      "projectUniqueName": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj",
       "projectName": "Hahn.ApplicationProcess.February2021.Domain",
-      "projectPath": "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj",
-      "packagesPath": "C:\\Users\\aclavijo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Domain\\obj\\",
+      "projectPath": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj",
+      "packagesPath": "C:\\Users\\andrc\\.nuget\\packages\\",
+      "outputPath": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\aclavijo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\andrc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2753,14 +2749,11 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
