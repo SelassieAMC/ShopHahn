@@ -23,16 +23,22 @@ namespace Hahn.ApplicationProcess.February2021.Data.Persistence.Repositories
             await _dbSet.AddAsync(entity);
         }
 
-        public virtual void Delete(int id)
+        public virtual void Delete(T entity)
         {
-            T entityToDelete = _dbSet.Find(id);
-            DeleteByEntity(entityToDelete);
+            if (_context.Entry(entity).State == EntityState.Detached)
+            {
+                _dbSet.Attach(entity);
+            }
+            _dbSet.Remove(entity);
         }
 
         public async Task<T> GetByIdAsync(int id)
         {
             var entity = await _dbSet.FindAsync(id);
-            _context.Entry(entity).State = EntityState.Detached;
+            if(entity != null)
+            {
+                _context.Entry(entity).State = EntityState.Detached;
+            }
             return entity;
         }
 
@@ -40,15 +46,6 @@ namespace Hahn.ApplicationProcess.February2021.Data.Persistence.Repositories
         {
             _dbSet.Attach(entity);
             _context.Entry(entity).State = EntityState.Modified;
-        }
-
-        public virtual void DeleteByEntity(T entityToDelete)
-        {
-            if (_context.Entry(entityToDelete).State == EntityState.Detached)
-            {
-                _dbSet.Attach(entityToDelete);
-            }
-            _dbSet.Remove(entityToDelete);
         }
     }
 }

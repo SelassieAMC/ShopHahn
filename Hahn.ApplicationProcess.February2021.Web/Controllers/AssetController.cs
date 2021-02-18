@@ -72,7 +72,6 @@ namespace Hahn.ApplicationProcess.February2021.Web.Controllers
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(AssetGetResponseExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(NotFoundResponseExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(InternalServerErrorResponseExample))]
-        [SwaggerRequestExample(typeof(int), typeof(AssetFindRequestExample))]
         public async Task<IActionResult> GetAssetByIdAsync([FromQuery] int id)
         {
             var result = await _assetService.GetAssetById(id);
@@ -138,10 +137,9 @@ namespace Hahn.ApplicationProcess.February2021.Web.Controllers
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(AssetDeleteResponseExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(NotFoundResponseExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(InternalServerErrorResponseExample))]
-        [SwaggerRequestExample(typeof(int),typeof(AssetDeleteRequestExample))]
-        public IActionResult DeleteAsset([FromQuery] int id)
+        public async Task<IActionResult> DeleteAssetAsync([FromQuery] int id)
         {
-            var result = _assetService.DeleteAsset(id);
+            var result = await _assetService.DeleteAsset(id);
             if (result.EndOnSuccess)
             {
                 return Ok(result);

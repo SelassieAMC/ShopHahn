@@ -9,6 +9,6 @@ namespace Hahn.ApplicationProcess.February2021.Domain.Interfaces
         public Task<UnitResult<AssetDto>> GetAssetById(int Id);
         public Task<UnitResult<AssetDto>> CreateAsset(AssetDto assetDto);
         public Task<UnitResult<AssetDto>> UpdateAsset(AssetDto assetDto);
-        public UnitResult<AssetDto> DeleteAsset(int Id);
+        public Task<UnitResult<AssetDto>> DeleteAsset(int Id);
     }
 }

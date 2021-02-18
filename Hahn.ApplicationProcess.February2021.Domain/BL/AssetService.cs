@@ -49,12 +49,18 @@ namespace Hahn.ApplicationProcess.February2021.Domain.BL
             }
         }
 
-        public UnitResult<AssetDto> DeleteAsset(int Id)
+        public async Task<UnitResult<AssetDto>> DeleteAsset(int Id)
         {
             var result = new UnitResult<AssetDto>();
             try
             {
-                _uOw.AssetRepository.Delete(Id);
+                var entity = await _uOw.AssetRepository.GetByIdAsync(Id);
+                if(entity is null)
+                {
+                    result.Failure("Not found!");
+                    return result;
+                }
+                _uOw.AssetRepository.Delete(entity);
                 _uOw.Commit();
 
                 result.Success();
@@ -82,7 +88,7 @@ namespace Hahn.ApplicationProcess.February2021.Domain.BL
             }
             catch (Exception ex)
             {
-                result.Failure(ex.Message,new AssetDto());
+                result.Failure(ex.Message);
                 return result;
             }
         }
@@ -113,7 +119,7 @@ namespace Hahn.ApplicationProcess.February2021.Domain.BL
             }
             catch (Exception ex)
             {
-                result.Failure(ex.Message, null);
+                result.Failure(ex.Message);
                 return result;
             }
         }

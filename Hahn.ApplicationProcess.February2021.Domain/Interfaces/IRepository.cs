@@ -11,6 +11,6 @@ namespace Hahn.ApplicationProcess.February2021.Domain.Interfaces
         public Task CreateAsync(T entity);
         public Task<T> GetByIdAsync(int id);
         public void UpdateAsync(T entity);
-        public void Delete(int id);
+        public void Delete(T entity);
     }
 }
