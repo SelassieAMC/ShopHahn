@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj": {}
+    "c:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj": {}
   },
   "projects": {
-    "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj": {
+    "c:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj",
+        "projectUniqueName": "c:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj",
         "projectName": "Hahn.ApplicationProcess.February2021.Data",
-        "projectPath": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj",
-        "packagesPath": "C:\\Users\\andrc\\.nuget\\packages\\",
-        "outputPath": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Data\\obj\\",
+        "projectPath": "c:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Data\\Hahn.ApplicationProcess.February2021.Data.csproj",
+        "packagesPath": "C:\\Users\\aclavijo\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\andrc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aclavijo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +31,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj": {
-                "projectPath": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj"
+              "c:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj": {
+                "projectPath": "c:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj"
               }
             }
           }
@@ -76,21 +79,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj": {
+    "c:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj",
+        "projectUniqueName": "c:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj",
         "projectName": "Hahn.ApplicationProcess.February2021.Domain",
-        "projectPath": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj",
-        "packagesPath": "C:\\Users\\andrc\\.nuget\\packages\\",
-        "outputPath": "C:\\Project\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.Application\\Hahn.ApplicationProcess.February2021.Domain\\obj\\",
+        "projectPath": "c:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Domain\\Hahn.ApplicationProcess.February2021.Domain.csproj",
+        "packagesPath": "C:\\Users\\aclavijo\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\aclavijo\\Documents\\Privado\\Projects\\ShopHahn\\Hahn.ApplicationProcess.February2021.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\andrc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aclavijo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -148,7 +154,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
