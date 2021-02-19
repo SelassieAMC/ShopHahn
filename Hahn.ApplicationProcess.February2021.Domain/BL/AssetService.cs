@@ -77,7 +77,7 @@ namespace Hahn.ApplicationProcess.February2021.Domain.BL
             catch (Exception ex)
             {
                 _logger.LogError($"Exception while trying to delete the asset with Id {Id}. {ex.Message}");
-                result.Failure(ex.Message);
+                result.Failure(ex.Message, new AssetDto());
                 return result;
             }
         }
@@ -92,6 +92,7 @@ namespace Hahn.ApplicationProcess.February2021.Domain.BL
                 {
                     _logger.LogError($"Asset with id {Id} not found!");
                     result.Failure("Asset not found!");
+                    return result;
                 }
                 result.Success(_mapper.Map<AssetDto>(data));
                 return result;
@@ -99,7 +100,7 @@ namespace Hahn.ApplicationProcess.February2021.Domain.BL
             catch (Exception ex)
             {
                 _logger.LogError($"Exception while trying to get the asset with Id {Id}. {ex.Message}");
-                result.Failure(ex.Message);
+                result.Failure(ex.Message,new AssetDto());
                 return result;
             }
         }
@@ -113,7 +114,7 @@ namespace Hahn.ApplicationProcess.February2021.Domain.BL
                 var eval = await IsValidAsset(assetDto);
                 if (!eval.Item1)
                 {
-                    result.Failure(eval.Item2);
+                    result.ValidationFailure(eval.Item2);
                     return result;
                 }
                 var asset = _mapper.Map<Asset>(assetDto);
@@ -134,7 +135,7 @@ namespace Hahn.ApplicationProcess.February2021.Domain.BL
             catch (Exception ex)
             {
                 _logger.LogError($"Exception while trying to update the asset object. {ex.Message}");
-                result.Failure(ex.Message);
+                result.Failure(ex.Message, new AssetDto());
                 return result;
             }
         }

@@ -108,6 +108,10 @@ namespace Hahn.ApplicationProcess.February2021.Web.Controllers
         public async Task<IActionResult> UpdateAssetAsync(AssetDto asset)
         {
             var result = await _assetService.UpdateAsset(asset);
+            if (result.EndOnValidationError)
+            {
+                return BadRequest(result);
+            }
             if (result.Result is null)
             {
                 return NotFound(result);
@@ -115,10 +119,6 @@ namespace Hahn.ApplicationProcess.February2021.Web.Controllers
             if (result.EndOnSuccess)
             {
                 return Ok(result);
-            }
-            if (result.EndOnValidationError)
-            {
-                return BadRequest(result);
             }
             return StatusCode(StatusCodes.Status500InternalServerError, result);
         }
@@ -144,7 +144,7 @@ namespace Hahn.ApplicationProcess.February2021.Web.Controllers
             {
                 return Ok(result);
             }
-            if (result.EndOnError)
+            if (result.Result is null)
             {
                 return NotFound(result);
             }
