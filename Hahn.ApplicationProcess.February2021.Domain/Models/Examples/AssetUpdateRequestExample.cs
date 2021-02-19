@@ -12,7 +12,7 @@ namespace Hahn.ApplicationProcess.February2021.Domain.Models.Examples
             {
                 ID = 1,
                 AssetName = "AssetEdited",
-                CountryOfDepartment = "Venezuela",
+                CountryOfDepartment = "Argentina",
                 Deparment = Enums.DepartmentType.Store1,
                 EMailAdressOfDepartment = "AssetEdited@asset.com",
                 IsBroken = false,

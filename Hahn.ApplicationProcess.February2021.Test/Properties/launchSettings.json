@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Hahn.ApplicationProcess.February2021.Test": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
