@@ -2,3 +2,4 @@
 **/bin/
 .dll
 .vs/
+**/node_modules/

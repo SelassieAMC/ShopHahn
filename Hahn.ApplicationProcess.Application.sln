@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hahn.ApplicationProcess.Feb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hahn.ApplicationProcess.February2021.Test", "Hahn.ApplicationProcess.February2021.Test\Hahn.ApplicationProcess.February2021.Test.csproj", "{4C934D59-1DA5-40EA-97F5-852386C6C875}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{494BF4D7-7405-4425-858F-7BCE627C0612}"
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{587DBB9A-C8CC-4D7C-85D5-F851376A473F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{4C934D59-1DA5-40EA-97F5-852386C6C875}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C934D59-1DA5-40EA-97F5-852386C6C875}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C934D59-1DA5-40EA-97F5-852386C6C875}.Release|Any CPU.Build.0 = Release|Any CPU
-		{494BF4D7-7405-4425-858F-7BCE627C0612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{494BF4D7-7405-4425-858F-7BCE627C0612}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{494BF4D7-7405-4425-858F-7BCE627C0612}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{494BF4D7-7405-4425-858F-7BCE627C0612}.Release|Any CPU.Build.0 = Release|Any CPU
+		{587DBB9A-C8CC-4D7C-85D5-F851376A473F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{587DBB9A-C8CC-4D7C-85D5-F851376A473F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{587DBB9A-C8CC-4D7C-85D5-F851376A473F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{587DBB9A-C8CC-4D7C-85D5-F851376A473F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

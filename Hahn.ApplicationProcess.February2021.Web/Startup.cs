@@ -46,9 +46,7 @@ namespace Hahn.ApplicationProcess.February2021.Web
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseHttpsRedirection();
-
+            
             app.UseSerilogRequestLogging();
 
             app.UseRouting();

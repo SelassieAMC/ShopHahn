@@ -5,11 +5,4 @@ services:
     image: ${DOCKER_REGISTRY-}hahnapplicationprocessfebruary2021web
     build:
       context: .
-      dockerfile: Hahn.ApplicationProcess.February2021.Web\Dockerfile
-
-  hahn.applicationprocess.february2021.test:
-    image: ${DOCKER_REGISTRY-}hahnapplicationprocessfebruary2021test
-    build:
-      context: .
-      dockerfile: Hahn.ApplicationProcess.February2021.Test\Dockerfile
-
+      dockerfile: Hahn.ApplicationProcess.February2021.Web/Dockerfile

@@ -4,8 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
     <DocumentationFile>bin\Debug\net5.0\WebApi.xml</DocumentationFile>
     <NoWarn>1701;1702;1591</NoWarn>
-    <UserSecretsId>e790f55e-e5fa-4df1-8354-8654167e3ece</UserSecretsId>
-    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <UserSecretsId>c711c5d1-2d2f-4b1f-8441-80f52aa60028</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
