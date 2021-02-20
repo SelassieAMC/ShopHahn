@@ -3,3 +3,4 @@
 .dll
 .vs/
 **/node_modules/
+**/.vscode/

@@ -1,3 +1,4 @@
+using Aurelia.DotNet;
 using Hahn.ApplicationProcess.February2021.Data;
 using Hahn.ApplicationProcess.February2021.Domain.Models.Examples;
 using Microsoft.AspNetCore.Builder;
@@ -37,6 +38,10 @@ namespace Hahn.ApplicationProcess.February2021.Web
                 c.IncludeXmlComments(filePath);
             });
             services.AddSwaggerExamplesFromAssemblyOf<AssetCreationRequestExample>();
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "AureliaApp/dist";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,6 +66,17 @@ namespace Hahn.ApplicationProcess.February2021.Web
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My Asset API v1");
+            });
+            app.UseStaticFiles();
+            app.UseSpaStaticFiles();
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "AureliaApp";
+
+                if (env.IsDevelopment())
+                {
+                    spa.UseAureliaCliServer();
+                }
             });
         }
     }
