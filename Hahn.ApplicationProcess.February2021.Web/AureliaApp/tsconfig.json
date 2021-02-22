@@ -25,5 +25,8 @@
   ],
   "atom": {
     "rewriteTsconfig": false
-  }
+  },
+  "types":[
+    "i18next","i18next-xhr-backend"
+  ]
 }
