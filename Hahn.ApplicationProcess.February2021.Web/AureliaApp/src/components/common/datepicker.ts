@@ -1,7 +1,7 @@
 import { customElement, bindable, inject } from "aurelia-framework";
 import * as moment from 'moment';
 import * as $ from 'jquery'
-@customElement("Calendar")
+@customElement("calendar")
 @inject(Element)
 export class Datepicker {
     private today: moment.Moment;

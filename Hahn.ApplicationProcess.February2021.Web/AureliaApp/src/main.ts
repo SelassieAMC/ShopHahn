@@ -1,3 +1,4 @@
+import { SimpleValidationRenderer } from './components/common/simpleValidationRenderer';
 import {Aurelia} from 'aurelia-framework';
 import * as environment from '../config/environment.json';
 import {PLATFORM} from 'aurelia-pal';
@@ -33,5 +34,7 @@ export function configure(aurelia: Aurelia): void {
     })
     .plugin(PLATFORM.moduleName('aurelia-validation'));
 
+  // aurelia.container.registerHandler("simple-renderer",container => container.get(SimpleValidationRenderer));
+  
   aurelia.start().then(() => aurelia.setRoot(PLATFORM.moduleName('app')));
 }

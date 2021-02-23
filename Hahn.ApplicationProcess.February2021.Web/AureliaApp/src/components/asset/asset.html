@@ -5,41 +5,44 @@
                 <h2 class="title">Asset Creation</h2>
             </div>
             <div class="card-body">
-                <form>
+                <form submit.delegate="submit()" autocomplete="off">
                     <div class="form-group">
                       <label for="assetName">Asset Name</label>
-                      <input type="email" class="form-control" id="assetName">
+                      <input type="text" class="form-control" id="assetName" value.bind="assetObject.name & validate">
                     </div>
                     <h5>Department Information</h5>
                     <section class="department-section">
                         <div class="row">                    
-                            <div class="col-md-5 mb-3">
+                            <div class="form-group col-md-5 mb-3">
                                 <label for="department">Department</label>
-                                <select class="custom-select d-block w-100" id="department">
-                                    <option value>Choose one ...</option>
-                                    <option value>Choose two ...</option>
+                                <select class="custom-select d-block w-100" value.bind="assetObject.department & validate" id="department">
+                                    <option model.bind="0">Choose one...</option>
+                                    <option repeat.for="department of departments"
+                                            model.bind="department.id">
+                                      ${department.name}
+                                    </option>
                                 </select>
                             </div>
-                            <div class="col-md-5 mb-3">
-                                <label for="countryDep">Country</label>
-                                <input type="text" class="form-control" id="countryDep">
+                            <div class="form-group col-md-5 mb-3">
+                              <label for="countryDep">Country</label>
+                              <input type="text" class="form-control" id="countryDep" value.bind="assetObject.countryDep & validate">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="emailDep">Email Address</label>
-                            <input type="email" class="form-control" id="emailDep">
+                            <input type="text" class="form-control" id="emailDep" value.bind="assetObject.emailDep & validate">
                         </div>
                     </section>
                     <div class="form-group">
                         <label for="purchaseDat">Purchase date</label>
-                        <input datepicker.two-way="date" class="form-control" id="purchaseDat" type="date" />
+                        <input datepicker.two-way="date" class="form-control" id="purchaseDat" type="date" value.bind="assetObject.purchaseDate & validate"/>
                     </div>
                     <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="broken">
+                      <input type="checkbox" class="custom-control-input" id="broken" value.bind="assetObject.broken">
                       <label class="custom-control-label" for="broken">Broken</label>
                     </div>
                     <div class="buttons">
-                        <button type="button" class="btn btn-primary btn-lg col-md-5">Send</button>
+                        <button type="submit" class="btn btn-primary btn-lg col-md-5">Send</button>
                         <button type="button" class="btn btn-warning btn-lg col-md-5">Reset</button>
                     </div>
                 </form>
