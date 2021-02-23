@@ -1,0 +1,50 @@
+<template>
+    <div class="wrapper wrapper--w790">
+        <div class="card card-5">
+            <div class="card-heading">
+                <h2 class="title">Asset Creation</h2>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                      <label for="assetName">Asset Name</label>
+                      <input type="email" class="form-control" id="assetName">
+                    </div>
+                    <h5>Department Information</h5>
+                    <section class="department-section">
+                        <div class="row">                    
+                            <div class="col-md-5 mb-3">
+                                <label for="department">Department</label>
+                                <select class="custom-select d-block w-100" id="department">
+                                    <option value>Choose one ...</option>
+                                    <option value>Choose two ...</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5 mb-3">
+                                <label for="countryDep">Country</label>
+                                <input type="text" class="form-control" id="countryDep">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailDep">Email Address</label>
+                            <input type="email" class="form-control" id="emailDep">
+                        </div>
+                    </section>
+                    <div class="form-group">
+                        <label for="purchaseDat">Purchase date</label>
+                        <input datepicker.two-way="date" class="form-control" id="purchaseDat" type="date" />
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="broken">
+                      <label class="custom-control-label" for="broken">Broken</label>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="btn btn-primary btn-lg col-md-5">Send</button>
+                        <button type="button" class="btn btn-warning btn-lg col-md-5">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</template>
+  
