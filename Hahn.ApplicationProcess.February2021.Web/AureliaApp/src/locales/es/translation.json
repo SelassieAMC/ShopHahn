@@ -1,8 +1,36 @@
 {
-  "score": "Score: {{score}}",
-  "lives": "{{count}} life remaining",
-  "lives_plural": "{{count}} lives remaining",
-  "friend": "A friend",
-  "friend_male": "A boyfriend",
-  "friend_female": "A girlfriend"
+  "assetForm":{
+    "title":"Creation de Activos",
+    "assetName":"Nombre de activo",
+    "departmentSection":"Informacion de departamento",
+    "department":"Departamento",
+    "country":"Pais",
+    "email":"Correo electronico",
+    "purchaseDate":"Fecha de compra",
+    "broken":"Defectuoso",
+    "send":"Enviar",
+    "reset":"Resetear",
+    "departmentTypes":{
+      "HQ":"HQ",
+      "Store1":"Tienda1",
+      "Store2":"Tienda2",
+      "Store3":"Tienda3",
+      "MaintenanceStation":"Estacion de mantenimiento"
+    },
+    "validationErrors":{
+      "nameRequired":"Nombre del activo requerido",
+      "nameMinLength":"Nombre del activo debe tener al menos 5 caracteres",
+      "countryRequired":"Pais del departamento requerido",
+      "emailRequired":"Correo electronico requerido",
+      "emailSyntax":"Correo electronico debe seguir la sintaxis cuenta@dominio .",
+      "departmentType":"Tipo de departamento invalido.",
+      "purchaseDate":"La fecha de compra no debe ser menor a un año."
+    }
+  },
+  "emptyOption":"Selecciona uno...",
+  "confirmDialogTitle":"Confirmacion",
+  "confirmReset":"Realmente quieres resetear toda los datos?",
+  "errorAPI":"Error llamando el servicio de API",
+  "successConfirmation":"Creacion Exitosa",
+  "successMessage":"La creacion del activo fue realizado de manera exitosa, ahora es tiempo de pensar en contratarme con un grandioso salario :) Saludos!"
 }

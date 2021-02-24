@@ -5,7 +5,7 @@ import {inject} from 'aurelia-framework';
 export class AssetService{
     constructor(private http: HttpClient){
         this.http = http;
-        const baseUrl = 'http://localhost:5000/api/';
+        const baseUrl = 'http://localhost/api/';
         http.configure(config => config.withBaseUrl(baseUrl));
     }
 

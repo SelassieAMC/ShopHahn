@@ -1,8 +1,36 @@
 {
-  "score": "Score: {{score}}",
-  "lives": "{{count}} life remaining",
-  "lives_plural": "{{count}} lives remaining",
-  "friend": "A friend",
-  "friend_male": "A boyfriend",
-  "friend_female": "A girlfriend"
+  "assetForm":{
+    "title":"Asset Creation",
+    "assetName":"Asset Name",
+    "departmentSection":"Department Information",
+    "department":"Department",
+    "country":"Country",
+    "email":"Email Address",
+    "purchaseDate":"Purchase date",
+    "broken":"Broken",
+    "send":"Send",
+    "reset":"Reset",
+    "departmentTypes":{
+      "HQ":"HQ",
+      "Store1":"Store1",
+      "Store2":"Store2",
+      "Store3":"Store3",
+      "MaintenanceStation":"Maintenance Station"
+    },
+    "validationErrors":{
+      "nameRequired":"Asset name is required",
+      "nameMinLength":"Asset name must have at least 5 characters.",
+      "countryRequired":"Country of department is required.",
+      "emailRequired":"Email address is required",
+      "emailSyntax":"Email address must follow the account@domain syntax.",
+      "departmentType":"Invalid department type.",
+      "purchaseDate":"The purchase date must not be older than one year."
+    }
+  },
+  "emptyOption":"Choose one ...",
+  "confirmDialogTitle":"Confirmation",
+  "confirmReset":"Are you really sure to reset all the data?",
+  "errorAPI":"Error Calling Asset API",
+  "successConfirmation":"Successful Creation",
+  "successMessage":"The asset creation was done successfully, now is the time to think about hiring me with a huge! salary :) Cheers!"
 }

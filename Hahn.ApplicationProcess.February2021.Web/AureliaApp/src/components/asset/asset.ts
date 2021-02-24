@@ -5,26 +5,34 @@ import {inject, NewInstance} from 'aurelia-dependency-injection';
 import './asset.css';
 import '../common/datepicker';
 import { ValidationRules, ValidationController } from 'aurelia-validation';
-import {computedFrom} from 'aurelia-framework';
 import {AssetService} from '../../services/assetService';
 import {DialogService} from 'aurelia-dialog';
 import {Dialog} from '../common/dialog/dialog';
+import { I18N } from 'aurelia-i18n';
+import { Router } from 'aurelia-router';
 
-@inject(NewInstance.of(ValidationController), AssetService, DialogService)
+@inject(NewInstance.of(ValidationController), AssetService, DialogService, I18N, Router)
 export class Asset {
   
-  constructor(private validationController: ValidationController, private assetService: AssetService, private dialogService:DialogService){
+  constructor(
+    private validationController: ValidationController, 
+    private assetService: AssetService, 
+    private dialogService:DialogService, 
+    private i18n:I18N, 
+    private router:Router){
     validationController.addRenderer(new BootstrapFormRenderer());
     this.dialogService = dialogService;
+    this.i18n = i18n;
+    this.router = router;
   }
   @bindable
   public assetObject = new AssetModel();
   public departments = [
-    {id:1, name: "HQ"},
-    {id:2, name: "Store1"},
-    {id:3, name: "Store2"},
-    {id:4, name: "Store3"},
-    {id:5, name: "Maintenance Station"}
+    {id:1, name: this.i18n.tr('assetForm.departmentTypes.HQ')},
+    {id:2, name: this.i18n.tr('assetForm.departmentTypes.Store1')},
+    {id:3, name: this.i18n.tr('assetForm.departmentTypes.Store2')},
+    {id:4, name: this.i18n.tr('assetForm.departmentTypes.Store3')},
+    {id:5, name: this.i18n.tr('assetForm.departmentTypes.MaintenanceStation')}
   ];
 
   public bind(){
@@ -32,27 +40,14 @@ export class Asset {
     lessOneYear.setUTCFullYear(lessOneYear.getUTCFullYear() - 1);
 
     ValidationRules
-      .ensure("assetName").required().withMessage("Asset name is required")
-                     .minLength(5).withMessage("Asset name must have at least 5 characters.")
-      .ensure("countryOfDepartment").required().withMessage("Country of department is required.")
-      .ensure("eMailAdressOfDepartment").required().withMessage("Email address is required")
-                         .email().withMessage("Email address must follow the @domain syntax.")
-      .ensure("department").range(1,5).withMessage("Invalid department type.")
-      .ensure("purchaseDate").satisfies(x => new Date(x) > lessOneYear).withMessage("The purchase date must not be older than one year.")
+      .ensure("assetName").required().withMessage(this.i18n.tr('assetForm.validationErrors.nameRequired'))
+                     .minLength(5).withMessage(this.i18n.tr('assetForm.validationErrors.nameMinLength'))
+      .ensure("countryOfDepartment").required().withMessage(this.i18n.tr('assetForm.validationErrors.countryRequired'))
+      .ensure("eMailAdressOfDepartment").required().withMessage(this.i18n.tr('assetForm.validationErrors.emailRequired'))
+                         .email().withMessage(this.i18n.tr('assetForm.validationErrors.emailSyntax'))
+      .ensure("department").range(1,5).withMessage(this.i18n.tr('assetForm.validationErrors.departmentType'))
+      .ensure("purchaseDate").satisfies(x => new Date(x) > lessOneYear).withMessage(this.i18n.tr('assetForm.validationErrors.purchaseDate'))
       .on(this.assetObject);
-  }
-
-  public isEqual(obj1, obj2) {
-    for (let prop in obj1) {
-      if (typeof obj1[prop] === 'object') {
-        return this.isEqual(obj1[prop], obj2[prop]);
-      }
-  
-      if (obj1[prop] !== obj2[prop]) {
-        return false;
-      }
-    }
-    return true;
   }
 
   get canReset(){
@@ -60,7 +55,7 @@ export class Asset {
   }
 
   public reset(){
-    this.showDialog("Are you really sure to reset all the data?","Confirmation",true,() => {
+    this.showDialog(this.i18n.tr('confirmReset'),this.i18n.tr('confirmDialogTitle'),true,() => {
       this.validationController.removeObject(this.assetObject);
       this.assetObject = new AssetModel();
       this.bind();
@@ -77,17 +72,16 @@ export class Asset {
     this.validationController.validate().then( 
       x => {
         if (x.valid) {
-          //call http
           this.assetService.SaveAsset(this.assetObject)
           .then(response => {
             if(response?.endOnSuccess){
-              //redirect to the page confirming
+              this.router.navigateToRoute("Success");
             }else{
-              this.showDialog(response?.errorMessage,"Error Calling API")
+              this.showDialog(response?.errorMessage,this.i18n.tr('errorAPI'))
             }
           })
           .catch(error => {
-            this.showDialog(error,"Error Calling API")
+            this.showDialog(error,this.i18n.tr('errorAPI'))
           })
         }
       });
