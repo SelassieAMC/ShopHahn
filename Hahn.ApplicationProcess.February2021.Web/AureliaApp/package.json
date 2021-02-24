@@ -11,6 +11,8 @@
     "aurelia-animator-css": "^1.0.4",
     "aurelia-bootstrap-datepicker": "^0.0.8",
     "aurelia-bootstrapper": "^2.3.3",
+    "aurelia-dialog": "^2.0.0",
+    "aurelia-fetch-client": "^1.8.2",
     "aurelia-form-renderer-bootstrap": "0.0.2",
     "aurelia-i18n": "^3.1.4",
     "aurelia-validation": "^2.0.0-rc2",
@@ -19,6 +21,7 @@
     "i18next-xhr-backend": "^3.2.2",
     "jquery": "^3.5.1",
     "moment": "^2.29.1",
+    "polyfill": "^0.1.0",
     "popper.js": "^1.16.1"
   },
   "devDependencies": {

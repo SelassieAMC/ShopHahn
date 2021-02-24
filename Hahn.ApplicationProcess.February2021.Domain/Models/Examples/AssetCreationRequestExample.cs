@@ -12,7 +12,7 @@ namespace Hahn.ApplicationProcess.February2021.Domain.Models.Examples
             {
                 AssetName = "Asset100",
                 CountryOfDepartment = "Colombia",
-                Deparment = Enums.DepartmentType.HQ,
+                Department = Enums.DepartmentType.HQ,
                 EMailAdressOfDepartment = "Asset100@asset.com",
                 IsBroken = false,
                 PurchaseDate = DateTimeOffset.Parse("01/01/2021")

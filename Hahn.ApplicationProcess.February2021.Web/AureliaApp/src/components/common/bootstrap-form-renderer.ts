@@ -56,6 +56,7 @@ export class BootstrapFormRenderer {
     // remove help-block
     const message = formGroup.querySelector(`#validation-message-${result.id}`);
     if (message) {
+      element.setAttribute("style", "border: 1px solid #ced4da;");
       formGroup.removeChild(message);
 
       // remove the has-error class from the enclosing form-group div

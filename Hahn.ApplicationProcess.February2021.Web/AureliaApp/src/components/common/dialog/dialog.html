@@ -1,0 +1,41 @@
+<template>
+    <style>
+        div.div{
+            background-color: white;
+            border: 1px solid blue;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .buttondiv{
+            margin-top: 15px;
+            text-align: center;
+        }
+        button{
+            min-width: 100px;
+            border-radius: 5px;
+        }
+        .divTitle{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+ 
+    <div class="div">
+        <div class="divTitle">
+            <h3>${title}</h3>
+        </div>
+     
+        <div>
+            <p1>${message}...</p1>
+        </div>
+     
+        <div class="buttondiv" hidden.bind="isConfirmation">
+            <button click.delegate="ok()">OK</button>
+        </div>
+
+        <div class="buttondiv" hidden.bind="!isConfirmation">
+            <button click.delegate="cancel()">No</button>
+            <button click.delegate="ok()">Yes</button>
+        </div>
+    </div>
+</template>

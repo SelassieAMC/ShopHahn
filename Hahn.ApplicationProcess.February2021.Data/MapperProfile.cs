@@ -10,10 +10,10 @@ namespace Hahn.ApplicationProcess.February2021.Data
         public MapperProfile()
         {
             CreateMap<Asset, AssetDto>()
-                .ForMember(dest => dest.Deparment, opt => opt.MapFrom(src => (Domain.Enums.DepartmentType) src.DepartmentId));
+                .ForMember(dest => dest.Department, opt => opt.MapFrom(src => (Domain.Enums.DepartmentType) src.DepartmentId));
 
             CreateMap<AssetDto, Asset>()
-            .ForMember(dest => dest.DepartmentId, opt => opt.MapFrom(src => (int)src.Deparment))
+            .ForMember(dest => dest.DepartmentId, opt => opt.MapFrom(src => (int)src.Department))
             .ForMember(dest => dest.Deparment, opt => opt.Ignore());
         }
     }

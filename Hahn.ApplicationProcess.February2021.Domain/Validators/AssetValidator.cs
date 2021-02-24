@@ -12,7 +12,7 @@ namespace Hahn.ApplicationProcess.February2021.Domain.Validators
             RuleFor(asset => asset.AssetName)
                 .Length(5, 255)
                 .WithMessage("it must contain at least 5 characters");
-            RuleFor(asset => asset.Deparment)
+            RuleFor(asset => asset.Department)
                 .IsInEnum()
                 .WithMessage("department type is invalid.");
             RuleFor(asset => asset.PurchaseDate)
