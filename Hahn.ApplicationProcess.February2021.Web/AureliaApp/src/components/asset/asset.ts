@@ -97,9 +97,6 @@ export class Asset {
               action: action,
               cancelAction: cancelAction}         
     })
-    .then(response => {
-      console.log(response);
-    });
   }
 }
   

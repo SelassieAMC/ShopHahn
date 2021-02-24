@@ -32,14 +32,14 @@ In order to run this container you'll need docker installed.
 
 * `docker-compose.override.yml` - Change port binding as you want
  
-* `Hahn.ApplicationProcess.February2021.Web/src/services/assetService.ts` - If you change the ports, change the base Url
-
+* `Hahn.ApplicationProcess.February2021.Web/AureliaApp/src/services/assetService.ts` - If you change the ports, change the base Url
+///
 ## Built With
 
 * .Net 5.0
 * Swashbuckle 6 with Request and Response examples
 * Entity Framework Core
-* Aurelia IO 1.3.1
+* Aurelia io 1.3.1
 
 ## Find me
 
