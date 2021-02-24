@@ -1,3 +1,4 @@
+import { PLATFORM } from 'aurelia-pal';
 import { BootstrapFormRenderer } from './../common/bootstrap-form-renderer';
 import { AssetModel } from './../models/assetModel';
 import { bindable } from 'aurelia-framework';
@@ -89,7 +90,7 @@ export class Asset {
 
   showDialog(message, title, confirmation=false, action?, cancelAction?){
     this.dialogService.open({ 
-      viewModel: Dialog, 
+      viewModel: PLATFORM.moduleName('components/common/dialog/dialog'), 
       model:{ message : message, 
               title: title, 
               confirmation: confirmation,

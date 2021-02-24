@@ -32,5 +32,6 @@
   "confirmReset":"Realmente quieres resetear toda los datos?",
   "errorAPI":"Error llamando el servicio de API",
   "successConfirmation":"Creacion Exitosa",
-  "successMessage":"La creacion del activo fue realizado de manera exitosa, ahora es tiempo de pensar en contratarme con un grandioso salario :) Saludos!"
+  "successMessage":"La creacion del activo fue realizado de manera exitosa, ahora es tiempo de pensar en contratarme con un grandioso salario :) Saludos!",
+  "backButton":"Volver"
 }

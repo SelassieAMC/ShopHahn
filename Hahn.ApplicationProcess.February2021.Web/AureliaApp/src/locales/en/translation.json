@@ -32,5 +32,6 @@
   "confirmReset":"Are you really sure to reset all the data?",
   "errorAPI":"Error Calling Asset API",
   "successConfirmation":"Successful Creation",
-  "successMessage":"The asset creation was done successfully, now is the time to think about hiring me with a huge! salary :) Cheers!"
+  "successMessage":"The asset creation was done successfully, now is the time to think about hiring me with a huge! salary :) Cheers!",
+  "backButton":"Go Back"
 }

@@ -1,8 +1,7 @@
 import {DialogController} from 'aurelia-dialog';
-import { autoinject} from 'aurelia-framework';
+import { autoinject } from 'aurelia-framework';
  
 @autoinject
- 
 export class Dialog {    
     title?: string;
     message?: string;
