@@ -17,7 +17,7 @@ namespace Hahn.ApplicationProcess.February2021.Domain.Models.Examples
                     ID = 1,
                     AssetName = "Asset1",
                     CountryOfDepartment = "Colombia",
-                    Deparment = Enums.DepartmentType.HQ,
+                    Deparment = (int)Enums.DepartmentType.HQ,
                     EMailAdressOfDepartment = "Asset1@asset.com",
                     IsBroken = false,
                     PurchaseDate = DateTimeOffset.Parse("01/01/2019")

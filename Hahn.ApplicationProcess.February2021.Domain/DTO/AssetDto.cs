@@ -7,7 +7,7 @@ namespace Hahn.ApplicationProcess.February2021.Domain.DTO
     {
         public int ID { get; set; }
         public string AssetName { get; set; }
-        public DepartmentType Deparment { get; set; }
+        public int Deparment { get; set; }
         public string CountryOfDepartment { get; set; }
         public string EMailAdressOfDepartment { get; set; }
         public DateTimeOffset PurchaseDate { get; set; }

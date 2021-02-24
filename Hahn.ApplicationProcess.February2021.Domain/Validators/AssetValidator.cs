@@ -13,7 +13,7 @@ namespace Hahn.ApplicationProcess.February2021.Domain.Validators
                 .Length(5, 255)
                 .WithMessage("it must contain at least 5 characters");
             RuleFor(asset => asset.Deparment)
-                .IsInEnum()
+                .InclusiveBetween(1,5)
                 .WithMessage("department type is invalid.");
             RuleFor(asset => asset.PurchaseDate)
                 .GreaterThanOrEqualTo(DateTimeOffset.UtcNow.AddYears(-1))
